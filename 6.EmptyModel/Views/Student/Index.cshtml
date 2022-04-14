@@ -1,0 +1,66 @@
+﻿@model _6.EmptyModel.Models.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student Details</title>
+</head>
+<body>
+
+    @*This is for ViewData*@
+    @*
+      @{
+            var student = ViewData["Student"] as _6.EmptyModel.Models.Student;
+      }
+    *@
+
+    @*//this is for view bag*@
+    @*@{
+
+        var student = ViewBag.Student;
+    }*@
+
+
+    <div>
+        @*<h1>@ViewData["Header"]</h1>*@
+        <h1>@ViewBag.Header</h1>
+    </div>
+    <table>
+        <tr>
+            <td>Student Id</td>
+            <td>@Model.StudentId</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>@Model.Gender</td>
+        </tr>
+        <tr>
+            <td>Class</td>
+            <td>@Model.Class</td>
+        </tr>
+        <tr>
+            <td>Roll</td>
+            <td>@Model.Roll</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>@Model.Address</td>
+        </tr>
+        <tr>
+            <td>Dept</td>
+            <td>@Model.Dept</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿@model _7.StronglyType.ViewModel.StudentDetailsViewModel;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Model.PageTilte</title>
+</head>
+<body>
+    <h1>@Model.PageHeader</h1>
+    <div>
+        EmployeeId:@Model.Student.StudentId
+    </div>
+    <div>
+        Name:@Model.Student.Name
+    </div>
+    <div>
+        Gender:@Model.Student.Gender
+    </div>
+    <div>
+        Dept:@Model.Student.Dept
+    </div>
+    <div>
+        Class:@Model.Student.Class
+    </div>
+    <div>
+        Roll:@Model.Student.Roll
+    </div>
+
+    <h1>Student Address</h1>
+    <div>
+        AddressId:@Model.Address.AddressId
+    </div>
+    <div>
+        City:@Model.Address.City
+    </div>
+    <div>
+        State:@Model.Address.State
+    </div>
+    <div>
+        County:@Model.Address.Country
+    </div>
+    <div>
+        Pin:@Model.Address.Pin
+    </div>
+   
+</body>
+</html>
