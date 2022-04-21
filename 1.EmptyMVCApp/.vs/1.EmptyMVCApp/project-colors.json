@@ -40,7 +40,12 @@
       "ProjectGuid": "1ce445e5-e198-4247-b84d-a621c7d7b791",
       "DisplayName": "7.StronglyType",
       "ColorIndex": 6
+    },
+    "068141be-bc4e-40d0-9951-32ebe4bc9b2a": {
+      "ProjectGuid": "068141be-bc4e-40d0-9951-32ebe4bc9b2a",
+      "DisplayName": "8.TempData",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 8
 }
