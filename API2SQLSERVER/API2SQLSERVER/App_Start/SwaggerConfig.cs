@@ -1,4 +1,5 @@
 using System.Web.Http;
+//using System.Linq;
 using WebActivatorEx;
 using API2SQLSERVER;
 using Swashbuckle.Application;
@@ -20,7 +21,9 @@ namespace API2SQLSERVER
                         c.SingleApiVersion("v1", "API2SQLSERVER");
                         c.IncludeXmlComments(string.Format(@"{0}\bin\API2SQLSERVER.xml",System.AppDomain.CurrentDomain.BaseDirectory));
 
-                       
+                        //c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+
+
                     })
                 .EnableSwaggerUi(c =>
                     {
