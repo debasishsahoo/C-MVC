@@ -76,13 +76,12 @@ namespace API2SQLSERVER.Controllers
                 }
                 else
                 {
-                 return Request.CreateResponse(HttpStatusCode.NotFound, "Employee with ID"+id.ToString()+"not found");
+                 return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Employee with ID"+id.ToString()+"not found");
                 }
 
                
             }
         }
-
 
         public HttpResponseMessage Post([FromBody] Employee employee)
         {
@@ -92,10 +91,8 @@ namespace API2SQLSERVER.Controllers
                     dbcontxt.Employees.Add(employee);
                     dbcontxt.SaveChanges();
 
-         var message = Request.CreateResponse(HttpStatusCode.Created, employee);
+                   var message = Request.CreateResponse(HttpStatusCode.Created, employee);
                     message.Headers.Location = new Uri(Request.RequestUri + employee.ID.ToString());
-
-
                     return message;
 
                 }
@@ -104,10 +101,71 @@ namespace API2SQLSERVER.Controllers
             }
             catch(Exception Ex) 
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest,Ex);
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest,Ex);
             }
 
         }
+
+        public HttpResponseMessage Put(int id, [FromBody] Employee employee)
+        {
+            try 
+            {
+                using (EmployeeDBContext dbcontxt = new EmployeeDBContext())
+                {
+            Employee singleEmployee = dbcontxt.Employees.FirstOrDefault(e => e.ID == id);
+
+                    if(singleEmployee!=null)
+                    {
+                        singleEmployee.FirstName = employee.FirstName;
+                        singleEmployee.LastName = employee.LastName;
+                        singleEmployee.Salary = employee.Salary;
+                        singleEmployee.Gender = employee.Gender;
+
+                        dbcontxt.SaveChanges();
+
+                   return Request.CreateResponse(HttpStatusCode.OK, singleEmployee);
+
+                    }
+                    else
+                    {
+                        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Employee with ID" + id.ToString() + "not found to Update");
+                    }
+                }
+            }
+            catch (Exception Ex) {
+
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, Ex);
+            }
+        
+        }
+
+        public HttpResponseMessage Delete(int id)
+        {
+            try 
+            {
+                using (EmployeeDBContext dbcontxt = new EmployeeDBContext())
+                {
+                    Employee singlemployee = dbcontxt.Employees.FirstOrDefault(e=>e.ID==id);
+                    if(singlemployee!=null)
+                    {
+                        dbcontxt.Employees.Remove(singlemployee);
+                        dbcontxt.SaveChanges();
+                        return Request.CreateResponse(HttpStatusCode.OK);
+                    }
+                    else
+                    {
+                        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Employee with ID " + id.ToString() + " not found to delete");
+                    }
+                }
+            }
+            catch (Exception Ex) {
+
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, Ex);
+            }
+        }
+
+
+
 
 
     }

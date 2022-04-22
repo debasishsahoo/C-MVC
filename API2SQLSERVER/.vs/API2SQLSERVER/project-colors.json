@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "caa28dad-9416-4a6f-b780-ee2e8a5f01d7": {
+      "ProjectGuid": "caa28dad-9416-4a6f-b780-ee2e8a5f01d7",
+      "DisplayName": "API2SQLSERVER",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
