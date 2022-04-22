@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace API2SQLSERVER
 {
@@ -21,6 +22,9 @@ namespace API2SQLSERVER
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            EnableCorsAttribute cors = new EnableCorsAttribute("https://localhost:44354/", "http://127.0.0.1:4200", "http://127.0.0.1:5200");
+            config.EnableCors(cors);
         }
     }
 

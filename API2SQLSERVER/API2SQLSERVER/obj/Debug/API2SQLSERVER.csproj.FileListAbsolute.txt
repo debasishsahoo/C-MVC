@@ -90,3 +90,6 @@ D:\.netprojects\Webvapplications\API2SQLSERVER\API2SQLSERVER\obj\Debug\API2SQLSE
 D:\.netprojects\Webvapplications\API2SQLSERVER\API2SQLSERVER\bin\API2SQLSERVER.xml
 D:\.netprojects\Webvapplications\API2SQLSERVER\API2SQLSERVER\bin\Swashbuckle.Core.dll
 D:\.netprojects\Webvapplications\API2SQLSERVER\API2SQLSERVER\bin\WebActivatorEx.dll
+D:\.netprojects\Webvapplications\API2SQLSERVER\API2SQLSERVER\bin\System.Web.Cors.dll
+D:\.netprojects\Webvapplications\API2SQLSERVER\API2SQLSERVER\bin\System.Web.Http.Cors.dll
+D:\.netprojects\Webvapplications\API2SQLSERVER\API2SQLSERVER\bin\System.Web.Http.Cors.xml

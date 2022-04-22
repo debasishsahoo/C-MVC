@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "066c7e81-9102-4d35-a660-e459aa7429c8": {
+      "ProjectGuid": "066c7e81-9102-4d35-a660-e459aa7429c8",
+      "DisplayName": "API2SQLSERVERFRONTEND",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

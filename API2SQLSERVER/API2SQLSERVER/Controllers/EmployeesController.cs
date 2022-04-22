@@ -164,6 +164,26 @@ namespace API2SQLSERVER.Controllers
             }
         }
 
+        //Same Origin
+        //http://127.0.0.1:1234/home/index  --frontend
+        //http://127.0.0.1:1234/api/Employee/get()  --Backend
+
+
+        //Cross Origin (BeCouse different PORT (4200 vs 5678))
+        //http://127.0.0.1:4200/home/index  --frontend
+        //http://127.0.0.1:5678/api/Employee/get()  --Backend
+
+
+        //Cross Origin (BeCouse different Domain (Com vs Net))
+        //http://Debasish.sahoo.com/home/index  --frontend
+        //http://Debasish.sahoo.net/api/Employee/get()  --Backend
+
+
+        //Cross Origin (BeCouse different Protocall (https vs http))
+        //https://Debasish.sahoo.com/home/index  --frontend
+        //http://Debasish.sahoo.net/api/Employee/get()  --Backend
+
+
 
 
 
