@@ -1,19 +1,18 @@
-﻿using System;
+﻿using API2SQLSERVER.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
-using API2SQLSERVER.Models;
 
 namespace API2SQLSERVER.Controllers
 {
-    public class StudentController : ApiController
+    public class RoutingDemoController : ApiController
     {
         [HttpGet]
-        [EnableCorsAttribute("*", "*", "*")]
-        public HttpResponseMessage LoadStudent()
+        public HttpResponseMessage GetAllStudent()
         {
             using (EmployeeDBContext dbcontxt = new EmployeeDBContext())
             {
@@ -24,8 +23,7 @@ namespace API2SQLSERVER.Controllers
         }
 
         [HttpGet]
-        [DisableCors]
-        public HttpResponseMessage LoadStudent(int id)
+        public HttpResponseMessage GetStudentById(int id)
         {
             using (EmployeeDBContext dbcontxt = new EmployeeDBContext())
             {
@@ -43,33 +41,6 @@ namespace API2SQLSERVER.Controllers
 
             }
         }
-
-        //[HttpGet]
-        //public HttpResponseMessage LoadStudent(string gender)
-        //{
-        //    using (EmployeeDBContext dbcontxt = new EmployeeDBContext())
-        //    {
-
-        //        List<Employee> employee = dbcontxt.Employees.Where(e => e.Gender == gender).ToList();
-
-        //        if (employee != null)
-        //        {
-        //            return Request.CreateResponse(HttpStatusCode.OK, employee);
-        //        }
-        //        else
-        //        {
-        //            return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Employee with Gender  " + gender + "not found");
-        //        }
-        //    }
-        //}
-
-
-
-
-
-
-
-
 
         [HttpPost]
         public HttpResponseMessage AddStudent([FromBody] Employee employee)
@@ -157,6 +128,5 @@ namespace API2SQLSERVER.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, Ex);
             }
         }
-
     }
 }

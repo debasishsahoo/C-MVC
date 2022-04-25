@@ -22,8 +22,10 @@ namespace API2SQLSERVER
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-
-            EnableCorsAttribute cors = new EnableCorsAttribute("https://localhost:44354/", "http://127.0.0.1:4200", "http://127.0.0.1:5200");
+            //First Star->Origin "https://localhost:44313"
+            //Second Star->Header "accept,content-type,origin"
+            //Third Star ->Method "GET,POST"/"PUT,DELETE"
+            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
         }
     }
