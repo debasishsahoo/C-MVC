@@ -11,7 +11,7 @@ namespace API2SQLSERVER.Controllers
 {
     public class RoutingDemoController : ApiController
     {
-        [HttpGet]
+        [HttpGet, HttpHead]
         public HttpResponseMessage GetAllStudent()
         {
             using (EmployeeDBContext dbcontxt = new EmployeeDBContext())
@@ -22,7 +22,7 @@ namespace API2SQLSERVER.Controllers
 
         }
 
-        [HttpGet]
+        [AcceptVerbs("GET","HEAD")]
         public HttpResponseMessage GetStudentById(int id)
         {
             using (EmployeeDBContext dbcontxt = new EmployeeDBContext())
@@ -128,5 +128,53 @@ namespace API2SQLSERVER.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, Ex);
             }
         }
+
+
+        //[HttpGet]
+        //[ActionName("Image")]
+        //public HttpResponseMessage FatchStudentImage(int id)
+        //{
+        //    using (EmployeeDBContext dbcontxt = new EmployeeDBContext())
+        //    {
+        //        Employee employee = dbcontxt.Employees.FirstOrDefault(e => e.ID == id);
+
+        //        if (employee != null)
+        //        {
+        //            return Request.CreateResponse(HttpStatusCode.OK, employee);
+        //        }
+        //        else
+        //        {
+        //            return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Employee with ID" + id.ToString() + "not found");
+        //        }
+
+
+        //    }
+        //}
+
+        //[HttpPost]
+        //[ActionName("Image")]
+        //public HttpResponseMessage AddStudentImage([FromBody] Employee employee)
+        //{
+        //    try
+        //    {
+        //        using (EmployeeDBContext dbcontxt = new EmployeeDBContext())
+        //        {
+        //            dbcontxt.Employees.Add(employee);
+        //            dbcontxt.SaveChanges();
+
+        //            var message = Request.CreateResponse(HttpStatusCode.Created, employee);
+        //            message.Headers.Location = new Uri(Request.RequestUri + employee.ID.ToString());
+        //            return message;
+
+        //        }
+
+
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        return Request.CreateErrorResponse(HttpStatusCode.BadRequest, Ex);
+        //    }
+
+        //}
     }
 }
