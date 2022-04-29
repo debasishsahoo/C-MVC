@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "377dcebf-8d00-44be-83b6-05a6b25059ba": {
+      "ProjectGuid": "377dcebf-8d00-44be-83b6-05a6b25059ba",
+      "DisplayName": "DynamicRouting",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
