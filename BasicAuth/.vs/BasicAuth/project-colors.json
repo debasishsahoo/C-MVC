@@ -5,6 +5,11 @@
       "ProjectGuid": "d18a3ef3-9ec8-43d7-8ff2-b87dc9c6b1db",
       "DisplayName": "BasicAuth",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

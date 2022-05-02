@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BasicAuth.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -11,7 +12,7 @@ namespace BasicAuth
         {
             // Web API configuration and services
 
-            //config.Filters.Add(new BasicAuthenticationAttribute);
+            config.Filters.Add(new BasicAuthenticationAttribute());
             // Web API routes
             config.MapHttpAttributeRoutes();
 

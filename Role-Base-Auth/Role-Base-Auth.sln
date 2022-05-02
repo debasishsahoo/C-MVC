@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Role-Base-Auth", "Role-Base-Auth\Role-Base-Auth.csproj", "{3C4DF3CA-F335-41F2-B7EC-C1FFA18691CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C4DF3CA-F335-41F2-B7EC-C1FFA18691CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C4DF3CA-F335-41F2-B7EC-C1FFA18691CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C4DF3CA-F335-41F2-B7EC-C1FFA18691CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C4DF3CA-F335-41F2-B7EC-C1FFA18691CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF530BC7-31C7-4D60-849E-8D4CBD2CE5E3}
+	EndGlobalSection
+EndGlobal
