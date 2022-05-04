@@ -53,7 +53,7 @@ namespace Role_Base_Auth.Models
                     identity.AddClaim(new Claim("Email", UserDetails.Email));
                     identity.AddClaim(new Claim(ClaimTypes.Name, UserDetails.UserName));
                     identity.AddClaim(new Claim("ID", Convert.ToString(UserDetails.ID)));
-                    IPrincipal principal = new GenericPrincipal(identity, UserDetails.Role.Split(','));
+                    IPrincipal principal = new GenericPrincipal(identity, UserDetails.Roles.Split(','));
 
 
                     Thread.CurrentPrincipal = principal;

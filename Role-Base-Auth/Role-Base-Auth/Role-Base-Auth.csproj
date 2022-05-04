@@ -89,10 +89,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AuthorizeAttribute.cs" />
     <Compile Include="Models\BasicAuthenticationAttribute.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeBLL.cs" />
+    <Compile Include="Models\MyAuthoizeAttribute.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UseValidate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

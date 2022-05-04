@@ -12,26 +12,29 @@ namespace Role_Base_Auth.Models
             List<User> userList = new List<User>();
             userList.Add(new User()
             {
+                //Base64Encode->TWlyOjEyMzQ1Ng==
                 ID = 1,
                 UserName = "Mir",
                 Password = "123456",
-                Role="Admin",
+                Roles="Admin",
                 Email="admin@a.com"
             });
             userList.Add(new User()
             {
+                //Base64Encode->QWJpcjphYmNkZWY=
                 ID = 2,
                 UserName = "Abir",
                 Password = "abcdef",
-                Role = "Admin,Superadmin",
+                Roles = "Admin,Superadmin",
                 Email = "bothUser@a.com"
             });
             userList.Add(new User()
             {
+                //Base64Encode->UG9seToxMjNhYmM=
                 ID = 3,
                 UserName = "Poly",
                 Password = "123abc",
-                Role = "Superadmin",
+                Roles = "Superadmin",
                 Email = "superadmin@a.com"
             });
 
