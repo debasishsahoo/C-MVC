@@ -12,7 +12,7 @@ namespace Role_Base_Auth.Models
             List<User> userList = new List<User>();
             userList.Add(new User()
             {
-                //Base64Encode->TWlyOjEyMzQ1Ng==
+                //Base64Encode->TWlyOjEyMzQ1Ng==     //Mir:123456
                 ID = 1,
                 UserName = "Mir",
                 Password = "123456",
@@ -21,7 +21,7 @@ namespace Role_Base_Auth.Models
             });
             userList.Add(new User()
             {
-                //Base64Encode->QWJpcjphYmNkZWY=
+                //Base64Encode->QWJpcjphYmNkZWY=    //Abir:abcdef
                 ID = 2,
                 UserName = "Abir",
                 Password = "abcdef",
@@ -30,7 +30,7 @@ namespace Role_Base_Auth.Models
             });
             userList.Add(new User()
             {
-                //Base64Encode->UG9seToxMjNhYmM=
+                //Base64Encode->UG9seToxMjNhYmM=    //Poly:123abc
                 ID = 3,
                 UserName = "Poly",
                 Password = "123abc",
